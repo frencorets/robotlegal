@@ -1,0 +1,157 @@
+/* ===== Variables y reset básico ===== */
+:root {
+  --bg: #1e293b;            /* fondo azul oscuro */
+  --text: #f1f5f9;          /* textos claros */
+  --muted: #cbd5e1;         /* texto secundario */
+  --accent: #38bdf8;        /* azul brillante */
+  --accent-text: #0b1220;   /* texto sobre botón acento */
+  --border: rgba(241, 245, 249, 0.35);
+  --container-w: 44rem;     /* ancho max del contenido */
+  --header-h: 3.5rem;       /* altura fija de header en móviles */
+  --radius: 0.75rem;
+  --gap: 1rem;
+  --btn-padding-y: 0.9rem;
+  --btn-padding-x: 1rem;
+  --focus-ring: 2px dashed var(--accent);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* base móvil; usar rem para escalar */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding-top: var(--header-h); /* evita solape con header fijo */
+}
+
+/* ===== Utilidades ===== */
+.container {
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* ===== Header fijo ===== */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.brand {
+  display: inline-block;
+  font-size: 0.95rem; /* pequeño para móviles */
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: calc(100dvh - var(--header-h));
+  display: flex;
+  align-items: center;
+}
+
+.hero__inner {
+  width: 100%;
+  display: grid;
+  gap: 1.125rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 1.75rem;     /* tamaño pensado para móvil, también funciona en desktop */
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero__subtitle {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* ===== Botones ===== */
+.actions {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 22rem; /* mantiene identidad en desktop */
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Botón primario */
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+/* Botón secundario con borde claro y fondo transparente */
+.btn--outline {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* Asegurar tamaño táctil mínimo */
+.btn {
+  min-height: 2.75rem; /* ~44px */
+}
+
+/* ===== Disclaimer ===== */
+.disclaimer {
+  margin: 0.25rem 0 0;
+  max-width: 38rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* ===== Desktop: mantener identidad sin cambiar layout ===== */
+@media (min-width: 48rem) {
+  html { font-size: 16px; } /* mantiene proporciones iguales */
+  .hero__title { font-size: 1.75rem; }
+  .hero__subtitle { font-size: 1rem; }
+}
