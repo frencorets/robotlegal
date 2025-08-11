@@ -185,3 +185,25 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.disclaimer {
+  margin-top: 2rem;
+  font-size: 0.85rem; /* Más pequeño que el texto normal */
+  line-height: 1.4;
+  color: #cbd5e1; /* Gris claro legible sobre fondo oscuro */
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9; /* Un poco atenuado */
+}
+
+.disclaimer p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 480px) {
+  .disclaimer {
+    font-size: 0.8rem; /* Aún más compacto en móviles */
+  }
+}
