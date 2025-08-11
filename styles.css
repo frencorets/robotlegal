@@ -185,3 +185,23 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Botón con ícono */
+.btn--with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  display: inline-block;
+  transition: transform 160ms ease;
+}
+
+/* Animar flecha al pasar el mouse */
+@media (hover: hover) and (pointer: fine) {
+  .btn--with-icon:hover .btn-icon {
+    transform: translateX(3px);
+  }
+}
