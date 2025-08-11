@@ -1,13 +1,13 @@
 /* ===== Variables y reset básico ===== */
 :root {
-  --bg: #1e293b;            /* fondo azul oscuro */
-  --text: #f1f5f9;          /* textos claros */
-  --muted: #cbd5e1;         /* texto secundario */
-  --accent: #38bdf8;        /* azul brillante */
-  --accent-text: #0b1220;   /* texto sobre botón acento */
+  --bg: #1e293b;
+  --text: #f1f5f9;
+  --muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-text: #0b1220;
   --border: rgba(241, 245, 249, 0.35);
-  --container-w: 44rem;     /* ancho max del contenido */
-  --header-h: 3.5rem;       /* altura fija de header en móviles */
+  --container-w: 44rem;
+  --header-h: 3.5rem;
   --radius: 0.75rem;
   --gap: 1rem;
   --btn-padding-y: 0.9rem;
@@ -17,13 +17,9 @@
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-html {
-  font-size: 16px; /* base móvil; usar rem para escalar */
-}
+html { font-size: 16px; }
 
 body {
   margin: 0;
@@ -34,7 +30,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  padding-top: var(--header-h); /* evita solape con header fijo */
+  padding-top: var(--header-h);
+}
+
+/* Reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
 
 /* ===== Utilidades ===== */
@@ -58,7 +59,7 @@ body {
 
 .brand {
   display: inline-block;
-  font-size: 0.95rem; /* pequeño para móviles */
+  font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
   font-weight: 600;
   letter-spacing: 0.01em;
   color: var(--text);
@@ -77,11 +78,13 @@ body {
   gap: 1.125rem;
   justify-items: center;
   text-align: center;
+  padding-block: 1.5rem;
 }
 
+/* Tipografía fluida con clamp */
 .hero__title {
   margin: 0;
-  font-size: 1.75rem;     /* tamaño pensado para móvil, también funciona en desktop */
+  font-size: clamp(1.6rem, 1.2rem + 2.2vw, 2.25rem);
   line-height: 1.2;
   font-weight: 700;
   color: var(--text);
@@ -90,7 +93,7 @@ body {
 .hero__subtitle {
   margin: 0;
   max-width: 36rem;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
   color: var(--muted);
 }
 
@@ -99,7 +102,7 @@ body {
   display: grid;
   gap: 0.75rem;
   width: 100%;
-  max-width: 22rem; /* mantiene identidad en desktop */
+  max-width: 22rem;
 }
 
 .btn {
@@ -116,6 +119,8 @@ body {
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
+  min-height: 2.75rem; /* ~44px táctil */
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .btn:focus-visible {
@@ -127,47 +132,56 @@ body {
 .btn--primary {
   background: var(--accent);
   color: var(--accent-text);
+  box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.5);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.28);
+  }
+  .btn--primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(56, 189, 248, 0.22);
+  }
 }
 
-/* Botón secundario con borde claro y fondo transparente */
+/* Botón secundario con borde claro */
 .btn--outline {
   background: transparent;
   color: var(--text);
   border-color: var(--border);
 }
-
-/* Asegurar tamaño táctil mínimo */
-.btn {
-  min-height: 2.75rem; /* ~44px */
+@media (hover: hover) and (pointer: fine) {
+  .btn--outline:hover {
+    border-color: rgba(241, 245, 249, 0.5);
+    transform: translateY(-1px);
+  }
+  .btn--outline:active { transform: translateY(0); }
 }
 
 /* ===== Disclaimer ===== */
 .disclaimer {
   margin: 0.25rem 0 0;
   max-width: 38rem;
-  font-size: 0.875rem;
+  font-size: clamp(0.84rem, 0.8rem + 0.2vw, 0.9rem);
   color: var(--muted);
 }
 
-/* ===== Desktop: mantener identidad sin cambiar layout ===== */
-@media (min-width: 48rem) {
-  html { font-size: 16px; } /* mantiene proporciones iguales */
-  .hero__title { font-size: 1.75rem; }
-  .hero__subtitle { font-size: 1rem; }
-}
-
+/* ===== Logo ===== */
 .logo-container {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 .site-logo {
-  max-width: 180px;
+  max-width: clamp(120px, 18vw, 180px);
   height: auto;
 }
 
-@media (max-width: 600px) {
-  .site-logo {
-    max-width: 120px;
+/* ===== Desktop tweaks opcionales ===== */
+@media (min-width: 56rem) {
+  .actions {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
   }
 }
