@@ -155,3 +155,19 @@ body {
   .hero__title { font-size: 1.75rem; }
   .hero__subtitle { font-size: 1rem; }
 }
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.site-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .site-logo {
+    max-width: 120px;
+  }
+}
