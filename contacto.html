@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#1e293b" />
-<meta name="description" content="Contacto de Robot Legal, asistente legal virtual basado en el marco jurídico chileno." />
+<meta name="description" content="Página de contacto de Robot Legal, asistente legal virtual basado en el marco jurídico chileno." />
 <meta name="application-name" content="Robot Legal" />
 <title>Contacto | Robot Legal</title>
 
@@ -51,41 +51,33 @@
       <div class="container page__inner">
         <h1 class="page__title">Contacto</h1>
         <p class="page__subtitle">
-          Escríbenos para consultas generales, sugerencias o propuestas de colaboración.
+          Si tienes consultas, sugerencias o comentarios sobre Robot Legal, completa el siguiente formulario.
         </p>
 
-        <section class="contact-cards">
-          <article class="card">
-            <h2 class="card__title">Correo</h2>
-            <p class="card__text">
-              <a class="link" href="mailto:contacto@robotlegal.cl">contacto@robotlegal.cl</a>
-            </p>
-          </article>
+        <!-- Formulario con FormSubmit -->
+        <form 
+          action="https://formsubmit.co/contacto@robotlegal.cl" 
+          method="POST" 
+          class="contact-form"
+        >
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
-          <article class="card">
-            <h2 class="card__title">LinkedIn</h2>
-            <p class="card__text">
-              <a class="link" href="https://www.linkedin.com/in/frencorets" target="_blank" rel="noopener noreferrer">
-                /in/frencorets
-              </a>
-            </p>
-          </article>
-        </section>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
 
-        <div class="actions center">
-          <a
-            class="btn btn--primary"
-            href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            Consultar ahora
-          </a>
-        </div>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+          <!-- Opciones de FormSubmit -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://robotlegal.cl/gracias.html">
+
+          <button type="submit" class="btn btn--primary">Enviar</button>
+        </form>
 
         <div class="disclaimer" role="note">
-          <p>La orientación es de carácter general y no constituye asesoría jurídica. Para casos concretos, consulte a un abogado habilitado en Chile.</p>
+          <p>Esta información se enviará de forma segura a nuestro correo electrónico. No compartas datos personales sensibles.</p>
         </div>
       </div>
     </main>
