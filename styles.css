@@ -351,3 +351,51 @@ body {
 
 /* ===== Scroll anclas ===== */
 #usos { scroll-margin-top: calc(var(--header-h) + 12px); }
+
+/* ===== Formulario de contacto ===== */
+.contact-form {
+  display: grid;
+  gap: 14px;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+.form__group { display: grid; gap: 6px; }
+.form__group label {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(2, 6, 23, 0.35);
+  color: var(--text);
+  font: inherit;
+}
+.contact-form textarea { resize: vertical; min-height: 150px; }
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* acciones del formulario */
+.form__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* honeypot oculto */
+.hp {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
