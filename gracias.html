@@ -3,17 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#1e293b" />
   <title>Gracias</title>
+
   <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="manifest" href="/manifest.webmanifest?v=3">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
+  <link rel="mask-icon" href="/mask-icon.svg?v=3" color="#38bdf8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=3">
+  <link rel="icon" type="image/png" sizes="256x256" href="/icon-256.png?v=3">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=3">
+  <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+
+  <!-- Redirección opcional a inicio en 6 s. Si no la quieres, elimina esta meta. -->
+  <meta http-equiv="refresh" content="6; url=index.html">
 </head>
 <body>
+  <!-- Header consistente -->
+  <header class="site-header" role="banner" aria-label="Encabezado">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">Robot Legal</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="usos.html">Usos</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="btn btn--sm btn--primary" href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal" target="_blank" rel="noopener noreferrer">Consultar ahora</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="page">
     <div class="container page__inner" style="text-align:center">
-      <h1>¡Gracias por tu mensaje!</h1>
+      <h1 aria-live="polite">¡Gracias por tu mensaje!</h1>
       <p class="muted">Lo recibimos correctamente. Te responderemos a la brevedad.</p>
       <a class="btn btn--primary" href="index.html">Volver al inicio</a>
     </div>
   </main>
+
+  <!-- JS opcional para contar regresiva de redirección -->
+  <script>
+    // Si mantienes la meta refresh, este script solo muestra el contador visual.
+    const p = document.querySelector('.muted');
+    let s = 6;
+    const id = setInterval(() => {
+      s--;
+      if (s <= 0) return clearInterval(id);
+      p.textContent = `Lo recibimos correctamente. Te responderemos a la brevedad. Redirigiendo en ${s} s...`;
+    }, 1000);
+  </script>
 </body>
 </html>
