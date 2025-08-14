@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#1e293b" />
+<meta name="description" content="Contacto - Robot Legal" />
+<meta name="application-name" content="Robot Legal" />
+<title>Contacto - Robot Legal</title>
+
+<link rel="preconnect" href="https://chatgpt.com" />
+<link rel="stylesheet" href="styles.css?v=6" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
+  </head>
+
+  <body>
+    <header class="site-header" role="banner" aria-label="Encabezado">
+      <div class="container header__inner">
+        <a class="brand" href="index.html">Robot Legal</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="usos.html">Guía de uso</a>
+          <a class="nav-link active" href="contacto.html">Contacto</a>
+          <a class="btn btn--sm btn--primary" href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal" target="_blank" rel="noopener noreferrer">Consultar ahora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section" aria-labelledby="contacto-title">
+      <div class="container">
+        <header class="section__header">
+          <h1 id="contacto-title" class="section__title">Contacto</h1>
+          <p class="section__subtitle">
+            Escríbenos y te responderemos a la brevedad. También puedes enviarnos un correo a
+            <a class="link" href="mailto:contacto@robotlegal.cl">contacto@robotlegal.cl</a>.
+          </p>
+        </header>
+
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/tu-correo@robotlegal.cl"
+          method="POST"
+        >
+          <!-- Configuración Formsubmit -->
+          <input type="hidden" name="_subject" value="Mensaje desde Robot Legal" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://TU-DOMINIO/gracias.html" />
+
+          <!-- Honeypot antispam -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+
+          <div class="form__group">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+
+          <div class="form__group">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" />
+          </div>
+
+          <div class="form__group">
+            <label for="asunto">Asunto</label>
+            <input id="asunto" name="asunto" type="text" required />
+          </div>
+
+          <div class="form__group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="6" required minlength="10" maxlength="2000" placeholder="Cuéntanos brevemente tu consulta"></textarea>
+          </div>
+
+          <!-- Autorespuesta opcional:
+          <input type="hidden" name="_autoresponse" value="Gracias por escribir a Robot Legal. Hemos recibido tu mensaje y te responderemos pronto.">
+          -->
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Enviar</button>
+            <a class="btn btn--ghost" href="index.html">Volver</a>
+          </div>
+        </form>
+
+        <aside class="notice" aria-live="polite">
+          <p><strong>Privacidad:</strong> Usamos Formsubmit para enviar tu mensaje por correo. No almacenamos tus datos en servidores propios.</p>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
