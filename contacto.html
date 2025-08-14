@@ -1,77 +1,93 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#1e293b" />
-  <title>Contacto - Robot Legal</title>
-  <link rel="stylesheet" href="styles.css?v=5" />
-  <link rel="manifest" href="/manifest.webmanifest?v=3">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
-</head>
-<body>
-  <header class="site-header" role="banner" aria-label="Encabezado">
-    <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="Ir al inicio">Robot Legal</a>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a class="nav-link" href="index.html">Inicio</a>
-        <a class="nav-link" href="usos.html">Usos</a>
-        <a class="btn btn--sm btn--primary" href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal" target="_blank" rel="noopener noreferrer">Consultar ahora</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#1e293b" />
+<meta name="description" content="Contacto de Robot Legal, asistente legal virtual basado en el marco jurídico chileno." />
+<meta name="application-name" content="Robot Legal" />
+<title>Contacto | Robot Legal</title>
 
-  <main class="page" id="contacto">
-    <div class="container page__inner">
-      <h1>Contacto</h1>
-      <p class="muted">Completa el formulario y te responderemos a la brevedad.</p>
+<link rel="preconnect" href="https://chatgpt.com" />
+<link rel="stylesheet" href="styles.css?v=5" />
 
-      <!-- FormSubmit -->
-      <form class="contact-form" action="https://formsubmit.co/contacto@robotlegal.cl" method="POST" accept-charset="UTF-8">
-        <!-- Configuración -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="Nuevo contacto desde robotlegal.cl">
-        <input type="hidden" name="_next" value="gracias.html">
-        <!-- Respuesta automática opcional al usuario -->
-        <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje a Robot Legal. Te contactaremos pronto.">
+<!-- Manifest PWA -->
+<link rel="manifest" href="/manifest.webmanifest?v=3">
 
-        <div class="form-row">
-          <label for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
-        </div>
+<!-- iOS -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Robot Legal" />
 
-        <div class="form-row">
-          <label for="email">Correo electrónico</label>
-          <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
-        </div>
+<!-- Safari pinned tab / Dock -->
+<link rel="mask-icon" href="/mask-icon.svg?v=3" color="#38bdf8">
 
-        <div class="form-row">
-          <label for="asunto">Asunto</label>
-          <input id="asunto" name="asunto" type="text" placeholder="Motivo de tu mensaje" required>
-        </div>
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=3">
+<link rel="icon" type="image/png" sizes="256x256" href="/icon-256.png?v=3">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=3">
+<link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+  </head>
 
-        <div class="form-row">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos tu caso o consulta" required></textarea>
-        </div>
-
-        <!-- Honeypot anti-bots (debe llamarse _honey) -->
-        <div class="hidden" aria-hidden="true">
-          <label for="website">No completar</label>
-          <input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off">
-        </div>
-
-        <button class="btn btn--primary" type="submit">Enviar</button>
-        <a class="btn btn--ghost" href="mailto:contacto@robotlegal.cl">O escríbenos directo</a>
-      </form>
-
-      <div class="disclaimer" role="note">
-        <p>Esta información es de carácter general y no constituye asesoría jurídica. Para casos concretos, consulte a un abogado habilitado en Chile.</p>
+  <body>
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Encabezado">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Ir al inicio">Robot Legal</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="usos.html">Usos</a>
+          <a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a>
+        </nav>
       </div>
-    </div>
-  </main>
-</body>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="page" id="contacto">
+      <div class="container page__inner">
+        <h1 class="page__title">Contacto</h1>
+        <p class="page__subtitle">
+          Escríbenos para consultas generales, sugerencias o propuestas de colaboración.
+        </p>
+
+        <section class="contact-cards">
+          <article class="card">
+            <h2 class="card__title">Correo</h2>
+            <p class="card__text">
+              <a class="link" href="mailto:contacto@robotlegal.cl">contacto@robotlegal.cl</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">LinkedIn</h2>
+            <p class="card__text">
+              <a class="link" href="https://www.linkedin.com/in/frencorets" target="_blank" rel="noopener noreferrer">
+                /in/frencorets
+              </a>
+            </p>
+          </article>
+        </section>
+
+        <div class="actions center">
+          <a
+            class="btn btn--primary"
+            href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+          >
+            Consultar ahora
+          </a>
+        </div>
+
+        <div class="disclaimer" role="note">
+          <p>La orientación es de carácter general y no constituye asesoría jurídica. Para casos concretos, consulte a un abogado habilitado en Chile.</p>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
