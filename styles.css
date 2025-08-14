@@ -450,3 +450,57 @@ body {
     padding: 24px;
   }
 }
+
+/* ===== Usos (layout con details/copiar) ===== */
+#usos.section { padding-block: calc(var(--header-h) + 1.25rem) 3.5rem; }
+#usos .section__header { text-align: center; margin-bottom: 1.5rem; }
+#usos .section__title { margin: 0 0 .35rem 0; font-size: clamp(1.6rem, 2.5vw, 2rem); font-weight: 700; }
+#usos .section__subtitle { margin: 0 auto 1rem; color: var(--muted); max-width: 46rem; }
+#usos .section__actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: .5rem; }
+#usos .section__actions--end { justify-content: center; margin-top: 1.25rem; }
+
+/* Grilla tarjetas */
+#usos .cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  margin-top: 1rem;
+}
+#usos .card {
+  grid-column: span 6;
+  background: rgba(15,23,42,.35);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+#usos .card__title { margin: 0 0 .15rem; font-size: 1.05rem; font-weight: 700; }
+#usos .card__desc { margin: 0 0 .5rem; color: var(--muted); }
+
+/* details */
+#usos .card__details { border-top: 1px dashed var(--border); padding-top: .6rem; }
+#usos .card__toggle { cursor: pointer; color: var(--text); font-weight: 600; }
+#usos .prompt-list { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .5rem; }
+#usos .prompt-list li { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: .5rem; }
+#usos .prompt-list .copy {
+  appearance: none; border: 1px solid var(--border); background: transparent; color: var(--text);
+  padding: .35rem .6rem; border-radius: .5rem; cursor: pointer; font-size: .9rem;
+}
+#usos .prompt-list span { color: var(--muted); }
+
+/* pasos */
+#usos .steps { margin: .6rem 0 0 1.25rem; color: var(--muted); }
+
+/* aviso */
+#usos .notice {
+  margin-top: 1.25rem; padding: 1rem 1.1rem;
+  background: rgba(15,23,42,.35); border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--muted);
+}
+#usos .notice .link { color: var(--accent); text-decoration: underline; }
+
+/* responsive */
+@media (max-width: 900px) {
+  #usos .card { grid-column: span 12; }
+  #usos.section { padding-block: calc(var(--header-h) + 1rem) 3rem; }
+}
+
