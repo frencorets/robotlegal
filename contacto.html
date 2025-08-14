@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#1e293b" />
+  <title>Contacto - Robot Legal</title>
+  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="manifest" href="/manifest.webmanifest?v=3">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
+</head>
+<body>
+  <header class="site-header" role="banner" aria-label="Encabezado">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">Robot Legal</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="usos.html">Usos</a>
+        <a class="btn btn--sm btn--primary" href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal" target="_blank" rel="noopener noreferrer">Consultar ahora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="contacto">
+    <div class="container page__inner">
+      <h1>Contacto</h1>
+      <p class="muted">Completa el formulario y te responderemos a la brevedad.</p>
+
+      <!-- FormSubmit: reemplaza TU_CORREO por tu email -->
+      <form class="contact-form" action="https://formsubmit.co/TU_CORREO" method="POST" accept-charset="UTF-8">
+        <!-- Evita spam y configura comportamiento -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde robotlegal.cl">
+        <!-- Redirección a página de gracias opcional -->
+        <input type="hidden" name="_next" value="https://www.robotlegal.cl/gracias.html">
+
+        <div class="form-row">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="asunto">Asunto</label>
+          <input id="asunto" name="asunto" type="text" placeholder="Motivo de tu mensaje" required>
+        </div>
+
+        <div class="form-row">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos tu caso o consulta" required></textarea>
+        </div>
+
+        <!-- Honeypot anti-bots -->
+        <div class="hidden">
+          <label for="website">No completar</label>
+          <input id="website" type="text" name="website">
+        </div>
+
+        <button class="btn btn--primary" type="submit">Enviar</button>
+        <a class="btn btn--ghost" href="mailto:contacto@robotlegal.cl">O escríbenos directo</a>
+      </form>
+
+      <div class="disclaimer" role="note">
+        <p>Esta información es de carácter general y no constituye asesoría jurídica. Para casos concretos, consulte a un abogado habilitado en Chile.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
