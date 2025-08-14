@@ -10,11 +10,18 @@
 <title>Usos - Robot Legal</title>
 
 <link rel="preconnect" href="https://chatgpt.com" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="stylesheet" href="styles.css?v=5" />
 
-<!-- Favicons mínimos -->
+<!-- Manifest / iOS / Favicons (consistentes con index) -->
+<link rel="manifest" href="/manifest.webmanifest?v=3">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
+<link rel="mask-icon" href="/mask-icon.svg?v=3" color="#38bdf8">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=3">
+<link rel="icon" type="image/png" sizes="256x256" href="/icon-256.png?v=3">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=3">
+<link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
   </head>
 
   <body>
@@ -25,7 +32,7 @@
         <nav class="site-nav" aria-label="Navegación principal">
           <a class="nav-link" href="index.html">Inicio</a>
           <a class="nav-link active" href="usos.html">Usos</a>
-          <a class="nav-link" href="mailto:contacto@robotlegal.cl">Contacto</a>
+          <a class="nav-link" href="contacto.html">Contacto</a>
           <a class="btn btn--sm btn--primary" href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal" target="_blank" rel="noopener noreferrer">Consultar ahora</a>
         </nav>
       </div>
@@ -41,7 +48,7 @@
           </p>
           <nav class="section__actions" aria-label="Acciones de la sección Usos">
             <a class="btn btn--primary" href="https://chatgpt.com/g/g-6897b32728648191b2db75a0022032cd-robot-legal" target="_blank" rel="noopener noreferrer">Probar el Asistente</a>
-            <a class="btn btn--outline" href="mailto:contacto@robotlegal.cl">Escríbenos</a>
+            <a class="btn btn--outline" href="contacto.html">Escríbenos</a>
           </nav>
         </header>
 
@@ -55,11 +62,11 @@
               <summary class="card__toggle">Ver ejemplos de preguntas</summary>
               <ul class="prompt-list">
                 <li>
-                  <button class="copy" data-copy="Soy arrendatario y mi arrendador no devuelve la garantía. Qué pasos puedo seguir y qué plazos aplican en Chile">Copiar</button>
+                  <button class="copy" type="button" data-copy="Soy arrendatario y mi arrendador no devuelve la garantía. Qué pasos puedo seguir y qué plazos aplican en Chile">Copiar</button>
                   <span>Soy arrendatario y mi arrendador no devuelve la garantía. Qué pasos puedo seguir y qué plazos aplican en Chile</span>
                 </li>
                 <li>
-                  <button class="copy" data-copy="Cómo redacto un aviso de término de contrato de arriendo por no pago. Qué debo incluir">Copiar</button>
+                  <button class="copy" type="button" data-copy="Cómo redacto un aviso de término de contrato de arriendo por no pago. Qué debo incluir">Copiar</button>
                   <span>Cómo redacto un aviso de término de contrato de arriendo por no pago. Qué debo incluir</span>
                 </li>
               </ul>
@@ -74,11 +81,11 @@
               <summary class="card__toggle">Ver ejemplos y paso a paso</summary>
               <ul class="prompt-list">
                 <li>
-                  <button class="copy" data-copy="Me despidieron por necesidades de la empresa. Qué indemnizaciones podrían corresponder y cómo se calculan">Copiar</button>
+                  <button class="copy" type="button" data-copy="Me despidieron por necesidades de la empresa. Qué indemnizaciones podrían corresponder y cómo se calculan">Copiar</button>
                   <span>Me despidieron por necesidades de la empresa. Qué indemnizaciones podrían corresponder y cómo se calculan</span>
                 </li>
                 <li>
-                  <button class="copy" data-copy="Qué plazo tengo para demandar por despido injustificado y qué documentos necesito">Copiar</button>
+                  <button class="copy" type="button" data-copy="Qué plazo tengo para demandar por despido injustificado y qué documentos necesito">Copiar</button>
                   <span>Qué plazo tengo para demandar por despido injustificado y qué documentos necesito</span>
                 </li>
               </ul>
@@ -98,104 +105,4 @@
               <summary class="card__toggle">Ver ejemplos y paso a paso</summary>
               <ul class="prompt-list">
                 <li>
-                  <button class="copy" data-copy="Compré un electrodoméstico con falla a los 20 días. Cómo usar la garantía legal en Chile y qué opción me conviene">Copiar</button>
-                  <span>Compré un electrodoméstico con falla a los 20 días. Cómo usar la garantía legal en Chile y qué opción me conviene</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="La tienda no responde al reclamo. Cómo escalar ante SERNAC paso a paso">Copiar</button>
-                  <span>La tienda no responde al reclamo. Cómo escalar ante SERNAC paso a paso</span>
-                </li>
-              </ul>
-              <ol class="steps">
-                <li>Guarda boleta, garantía y evidencia de la falla.</li>
-                <li>Elige entre cambio, reparación o devolución según ley.</li>
-                <li>Si no responden, presenta reclamo formal y escala a SERNAC.</li>
-              </ol>
-            </details>
-          </article>
-
-          <!-- 4. Infracciones de tránsito -->
-          <article class="card">
-            <h3 class="card__title">Infracciones de tránsito</h3>
-            <p class="card__desc">Descargos, alternativas y plazos.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Tengo un parte por exceso de velocidad. Conviene presentarme o pagar con descuento. Qué plazo tengo">Copiar</button>
-                  <span>Tengo un parte por exceso de velocidad. Conviene presentarme o pagar con descuento. Qué plazo tengo</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Cómo redacto un escrito simple de descargos ante el Juzgado de Policía Local">Copiar</button>
-                  <span>Cómo redacto un escrito simple de descargos ante el Juzgado de Policía Local</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-
-          <!-- 5. Herencias y posesión efectiva -->
-          <article class="card">
-            <h3 class="card__title">Herencias y posesión efectiva</h3>
-            <p class="card__desc">Documentos, trámite y reparto.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Qué documentos necesito para posesión efectiva intestada y cuánto demora">Copiar</button>
-                  <span>Qué documentos necesito para posesión efectiva intestada y cuánto demora</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Cómo calcular la porción hereditaria entre cónyuge e hijos en Chile">Copiar</button>
-                  <span>Cómo calcular la porción hereditaria entre cónyuge e hijos en Chile</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-
-          <!-- 6. Datos personales -->
-          <article class="card">
-            <h3 class="card__title">Datos personales</h3>
-            <p class="card__desc">Derechos ARCO y reclamos.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Cómo ejerzo mi derecho de acceso y eliminación de datos ante una empresa. Dame un modelo de carta">Copiar</button>
-                  <span>Cómo ejerzo mi derecho de acceso y eliminación de datos ante una empresa. Dame un modelo de carta</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Qué puede pasar si una empresa filtra mis datos. Qué pasos dar">Copiar</button>
-                  <span>Qué puede pasar si una empresa filtra mis datos. Qué pasos dar</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-        </div>
-
-        <!-- Bloque alcance y alerta -->
-        <aside class="notice">
-          <p><strong>Alcance:</strong> Robot Legal entrega información general basada en el marco jurídico chileno. No reemplaza la asesoría de un abogado habilitado en Chile.</p>
-          <p><strong>Busca ayuda profesional si:</strong> hay riesgo a tu seguridad, plazos judiciales inminentes o montos altos en juego. <a href="mailto:contacto@robotlegal.cl" class="link">Contáctanos</a>.</p>
-        </aside>
-
-        <div class="section__actions section__actions--end">
-          <a class="btn btn--primary" href="index.html">Volver al inicio</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Script copiar prompts -->
-    <script>
-      document.addEventListener('click', function (e) {
-        const btn = e.target.closest('.copy');
-        if (!btn) return;
-        const text = btn.getAttribute('data-copy') || '';
-        navigator.clipboard.writeText(text).then(() => {
-          const original = btn.textContent;
-          btn.textContent = 'Copiado';
-          setTimeout(() => { btn.textContent = original; }, 1200);
-        });
-      });
-    </script>
-  </body>
-</html>
+                  <button class="copy" type="button" data-copy="Compré un electrodo
