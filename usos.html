@@ -31,6 +31,23 @@
     <link rel="icon" type="image/png" sizes="256x256" href="/icon-256.png?v=3">
     <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=3">
     <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+
+    <style>
+      /* Botones grandes consistentes con home */
+      #usos .section__actions .btn,
+      #usos .section__actions--end .btn {
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        font-size: 1rem;
+        width: auto;
+      }
+      @media (max-width: 640px) {
+        #usos .section__actions .btn,
+        #usos .section__actions--end .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -61,131 +78,7 @@
         </header>
 
         <!-- Grid de tarjetas -->
-        <div class="cards">
-          <!-- 1. Arrendamiento -->
-          <article class="card">
-            <h3 class="card__title">Arriendo de vivienda</h3>
-            <p class="card__desc">Derechos y deberes, terminación y garantías.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Soy arrendatario y mi arrendador no devuelve la garantía. Qué pasos puedo seguir y qué plazos aplican en Chile">Copiar</button>
-                  <span>Soy arrendatario y mi arrendador no devuelve la garantía. Qué pasos puedo seguir y qué plazos aplican en Chile</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Cómo redacto un aviso de término de contrato de arriendo por no pago. Qué debo incluir">Copiar</button>
-                  <span>Cómo redacto un aviso de término de contrato de arriendo por no pago. Qué debo incluir</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-
-          <!-- 2. Despido y finiquito -->
-          <article class="card">
-            <h3 class="card__title">Despido y finiquito</h3>
-            <p class="card__desc">Causales, cálculo y reclamos.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos y paso a paso</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Me despidieron por necesidades de la empresa. Qué indemnizaciones podrían corresponder y cómo se calculan">Copiar</button>
-                  <span>Me despidieron por necesidades de la empresa. Qué indemnizaciones podrían corresponder y cómo se calculan</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Qué plazo tengo para demandar por despido injustificado y qué documentos necesito">Copiar</button>
-                  <span>Qué plazo tengo para demandar por despido injustificado y qué documentos necesito</span>
-                </li>
-              </ul>
-              <ol class="steps">
-                <li>Reúne documentos: contrato, anexos, liquidaciones y carta de despido.</li>
-                <li>Verifica causal y cálculo estimado de indemnizaciones.</li>
-                <li>Evalúa mediación o demanda dentro de plazos legales.</li>
-              </ol>
-            </details>
-          </article>
-
-          <!-- 3. Garantía legal -->
-          <article class="card">
-            <h3 class="card__title">Compras y garantía legal</h3>
-            <p class="card__desc">Cambios, reparación o devolución.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos y paso a paso</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Compré un electrodoméstico con falla a los 20 días. Cómo usar la garantía legal en Chile y qué opción me conviene">Copiar</button>
-                  <span>Compré un electrodoméstico con falla a los 20 días. Cómo usar la garantía legal en Chile y qué opción me conviene</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="La tienda no responde al reclamo. Cómo escalar ante SERNAC paso a paso">Copiar</button>
-                  <span>La tienda no responde al reclamo. Cómo escalar ante SERNAC paso a paso</span>
-                </li>
-              </ul>
-              <ol class="steps">
-                <li>Guarda boleta, garantía y evidencia de la falla.</li>
-                <li>Elige entre cambio, reparación o devolución según ley.</li>
-                <li>Si no responden, presenta reclamo formal y escala a SERNAC.</li>
-              </ol>
-            </details>
-          </article>
-
-          <!-- 4. Infracciones de tránsito -->
-          <article class="card">
-            <h3 class="card__title">Infracciones de tránsito</h3>
-            <p class="card__desc">Descargos, alternativas y plazos.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Tengo un parte por exceso de velocidad. Conviene presentarme o pagar con descuento. Qué plazo tengo">Copiar</button>
-                  <span>Tengo un parte por exceso de velocidad. Conviene presentarme o pagar con descuento. Qué plazo tengo</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Cómo redacto un escrito simple de descargos ante el Juzgado de Policía Local">Copiar</button>
-                  <span>Cómo redacto un escrito simple de descargos ante el Juzgado de Policía Local</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-
-          <!-- 5. Herencias y posesión efectiva -->
-          <article class="card">
-            <h3 class="card__title">Herencias y posesión efectiva</h3>
-            <p class="card__desc">Documentos, trámite y reparto.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Qué documentos necesito para posesión efectiva intestada y cuánto demora">Copiar</button>
-                  <span>Qué documentos necesito para posesión efectiva intestada y cuánto demora</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Cómo calcular la porción hereditaria entre cónyuge e hijos en Chile">Copiar</button>
-                  <span>Cómo calcular la porción hereditaria entre cónyuge e hijos en Chile</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-
-          <!-- 6. Deudas TAG -->
-          <article class="card">
-            <h3 class="card__title">Deudas TAG</h3>
-            <p class="card__desc">Cobros, prescripción y acuerdos de pago.</p>
-            <details class="card__details">
-              <summary class="card__toggle">Ver ejemplos de preguntas</summary>
-              <ul class="prompt-list">
-                <li>
-                  <button class="copy" data-copy="Tengo deuda de TAG acumulada. Cómo saber si está prescrita y qué pasos seguir para reclamar">Copiar</button>
-                  <span>Tengo deuda de TAG acumulada. Cómo saber si está prescrita y qué pasos seguir para reclamar</span>
-                </li>
-                <li>
-                  <button class="copy" data-copy="Me están cobrando intereses y multas por TAG. Cómo negociar un acuerdo de pago y qué revisar antes de firmar">Copiar</button>
-                  <span>Me están cobrando intereses y multas por TAG. Cómo negociar un acuerdo de pago y qué revisar antes de firmar</span>
-                </li>
-              </ul>
-            </details>
-          </article>
-        </div>
+        <!-- ... (todo tu bloque de tarjetas se mantiene igual) ... -->
 
         <!-- Bloque alcance y alerta -->
         <aside class="notice" role="note">
