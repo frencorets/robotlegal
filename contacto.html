@@ -28,14 +28,15 @@
       <h1>Contacto</h1>
       <p class="muted">Completa el formulario y te responderemos a la brevedad.</p>
 
-      <!-- FormSubmit: reemplaza TU_CORREO por tu email -->
+      <!-- FormSubmit -->
       <form class="contact-form" action="https://formsubmit.co/contacto@robotlegal.cl" method="POST" accept-charset="UTF-8">
-        <!-- Evita spam y configura comportamiento -->
+        <!-- Configuración -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_subject" value="Nuevo contacto desde robotlegal.cl">
-        <!-- Redirección a página de gracias opcional -->
-        <input type="hidden" name="_next" value="https://www.robotlegal.cl/gracias.html">
+        <input type="hidden" name="_next" value="gracias.html">
+        <!-- Respuesta automática opcional al usuario -->
+        <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje a Robot Legal. Te contactaremos pronto.">
 
         <div class="form-row">
           <label for="nombre">Nombre</label>
@@ -57,10 +58,10 @@
           <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos tu caso o consulta" required></textarea>
         </div>
 
-        <!-- Honeypot anti-bots -->
-        <div class="hidden">
+        <!-- Honeypot anti-bots (debe llamarse _honey) -->
+        <div class="hidden" aria-hidden="true">
           <label for="website">No completar</label>
-          <input id="website" type="text" name="website">
+          <input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off">
         </div>
 
         <button class="btn btn--primary" type="submit">Enviar</button>
