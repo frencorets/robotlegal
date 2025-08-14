@@ -86,7 +86,7 @@ body {
 .nav-link {
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.88rem; /* más pequeño */
   padding: 0.25rem 0.35rem;
   border-radius: 6px;
 }
@@ -95,6 +95,21 @@ body {
   color: var(--text);
   text-decoration: underline;
   outline: none;
+}
+
+/* Botón "Consultar ahora" en header */
+.site-nav .btn--sm.btn--primary {
+  font-weight: 700;
+  background: var(--accent);
+  color: var(--accent-text);
+  border: 1px solid var(--accent);
+}
+@media (hover: hover) and (pointer: fine) {
+  .site-nav .btn--sm.btn--primary:hover {
+    background: #5dd4ff;
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.4);
+    transform: translateY(-1px);
+  }
 }
 
 /* ===== Hero ===== */
